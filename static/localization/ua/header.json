@@ -1,0 +1,53 @@
+{
+    "paragraphs": {
+        "classes": {
+            "title": "КУРСИ",
+            "link": "search",
+            "items": [
+                {
+                    "title": "Програмування",
+                    "items": [
+                        { "title": "Java" },
+                        { "title": "C#" },
+                        { "title": "iOS" },
+                        { "title": "C++" },
+                        { "title": "Frontend(HTML/CSS/JS)" },
+                        { "title": "PHP" },
+                        { "title": "Python" }
+                    ]
+                }, {
+                    "title": "QA та тестування"
+                }, {
+                    "title": "Аналіз данних",
+                    "items": [
+                        { "title": "Статистика" },
+                        { "title": "Машинне навчання" },
+                        { "title": "Великі дані" }
+                    ]
+                }, {
+                    "title": "Управління проектами"
+                }, {
+                    "title": "Інтернет-маркетинг"
+                }, {
+                    "title": "SEO-оптимізація"
+                }, {
+                    "title": "UI/UX Design"
+                }, {
+                    "title": "IT recruitment"
+                }
+            ]
+        },
+        "news": {
+            "title": "НОВИНИ",
+            "link": "news"
+        },
+        "about": {
+            "title": "ПРО НАС",
+            "link": "about",
+            "items": [
+                { "title": "Контакти" },
+                { "title": "Співробітництво" }
+            ]
+        }
+    }
+}
