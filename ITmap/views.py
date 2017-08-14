@@ -1,14 +1,11 @@
-from django.http import HttpResponse
+from django.shortcuts import get_object_or_404, render
 
+from .locale import localize
 
-def index(request):
-    return HttpResponse("index")
+def header(request):
+    locale = localize('header', 'ru')
+    return render(request, 'polls/detail.html', {'locale': locale})
 
-def search(request):
-    return HttpResponse("search")
-
-def news(request):
-    return HttpResponse("news")
-
-def about(request):
-    return HttpResponse("about")
+def footer(request):
+    locale = localize('footer', 'ua')
+    return render(request, 'polls/detail.html', {'locale': locale})

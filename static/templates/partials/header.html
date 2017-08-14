@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+
+<header>
+    <a class="logo" href={{ '/' + language }}>
+        <img src="{% static 'img/favicon.png' %}" alt={{ sitename }}>
+        <span>{{ sitename }}</span>
+    </a>
+    <ul class="menu">
+        {% for i in localization.paragraphs  %}
+            {% if items in i %>
+                <li class="dropdown">
+                    <a href={{ f'/{language}/{i.link}' }}>{{ i.title }}</a>
+                    <ul>
+                        {% for item in i.items %}
+                            <li class="dropside">
+                                <a href="">{{ item.title }}</a>
+                                {% if items in item %}
+                                    <ul>
+                                        {% for subItem in item.items %}
+                                            <li><a href="">{{ subItem.title }}</a></li>
+                                        {% endfor %}
+                                    </ul>
+                                {% endif %}
+                            </li>
+                        <% }); %>
+                    </ul>
+                </li>
+            {% elif %}
+                    <li><a href={{ f'/{language}/{i.link}' }}>{{ i.title }}</a></li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+    <div class="lang">
+        <a class="ru {{ 'selected' if (language == 'ru') else '' }}" href="/ru/{{ location }}">RU</a>
+        <a class="ua {{ 'selected' if (language == 'ua') else '' }}" href="/ua/{{ location }}">UA</a>
+    </div>
+</header>

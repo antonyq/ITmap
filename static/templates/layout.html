@@ -1,0 +1,39 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang={{ language }}>
+<head>
+    <title>{{ locale.meta.title }}</title>
+    <meta name="description" content="<%= locale.meta.description }}">
+    <meta name="keywords" content="{{ ' '.join(locale.meta.keywords) }}">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{% static 'img/favicon.png' %}">
+
+
+    <!-- STYLES -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/libs/bootstrap/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/libs/bootstrap/bootstrap-select.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/libs/mdb/mdb.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.min.css' %}">
+    <!-- STYLES -->
+
+
+    <!-- SCRIPTS -->
+    <script src="{% static 'js/libs/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'js/libs/bootstrap/bootstrap.min.js' %}"></script>
+    <!-- SCRIPTS -->
+</head>
+<body>
+    {% include "partials/header.html" %} 
+
+    <main>
+        {% block main %}
+        {% endblock %}
+    </main>
+
+    {% include "partials/footer.html" %} 
+</body>
+</html>
