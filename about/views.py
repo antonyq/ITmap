@@ -1,3 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404, render
 
-# Create your views here.
+# from locale import localize
+
+def about(request):
+    # locale = localize('search', 'ru')
+    return render(request, 'polls/detail.html', {'locale': locale})

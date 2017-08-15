@@ -1,7 +1,8 @@
-from django.shortcuts import get_object_or_404, render
+from django.conf.urls import url, include
+from django.contrib import admin
 
-from ../../locale import localize
+from . import views
 
-def search(request):
-    # locale = localize('header', 'ru')
-    return render(request, 'search.html', {'locale': locale})
+urlpatterns = [
+    url(r'^$', views.search)
+]
