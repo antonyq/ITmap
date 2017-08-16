@@ -1,6 +1,9 @@
 from json import load
 
 
-def localize(file_name, language):
-    with open(f'static/locale/{language}/{file_name}.json', encoding='utf8') as data_json:    
-        return load(data_json)
+def localize(language, file_names):
+    locales = []
+    for name in file_names:
+        with open(f'static/locale/{language}/{name}.json', encoding='utf8') as data_json:    
+            locales.append(load(data_json))
+    return locales
