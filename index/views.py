@@ -4,9 +4,12 @@ from ITmap.locale import localize
 
 def index(request):
     locale = localize('header', 'ru')
-    print(locale['paragraphs'])
+    # print('OUTPUT')
+    # for key, value in locale['paragraphs'].items():
+    #     print(key, value, '/n')
+    # print('OUTPUT')
     return render(request, 'index.html', {
-        'locale': locale, 
+        'locale': locale['paragraphs'], 
         'language': 'ru', 
         'sitename': 'ITmap', 
     })

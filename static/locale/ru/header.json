@@ -3,10 +3,10 @@
         "classes": {
             "title": "КУРСЫ",
             "link": "search",
-            "items": [
+            "entries": [
                 {
                     "title": "Программирование",
-                    "items": [
+                    "entries": [
                         { "title": "Java" },
                         { "title": "C#" },
                         { "title": "iOS" },
@@ -19,7 +19,7 @@
                     "title": "QA и тестирование"
                 }, {
                     "title": "Анализ данных",
-                    "items": [
+                    "entries": [
                         { "title": "Статистика" },
                         { "title": "Машинное обучение" },
                         { "title": "Большие данные" }
@@ -44,7 +44,7 @@
         "about": {
             "title": "О НАС",
             "link": "about",
-            "items": [
+            "entries": [
                 { "title": "Контакты" },
                 { "title": "Сотрудничество" }
             ]

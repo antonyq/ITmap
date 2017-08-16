@@ -7,25 +7,25 @@
         <span>{{ sitename }}</span>
     </a>
     <ul class="menu">
-        {% for paragraph, content in locale.paragraphs %}
-            {% if content.items %}  
-                <li class="dropdown">
-                    <a href='/{{language}}/{{paragraph.link}}'>{{ content.title }}</a>
+        {% for paragraph, content in locale.items %}
+            {% if content.entries %}  
+                 <li class="dropdown">
+                    <a href='/{{language}}/{{content.link}}'>{{ content.title }}</a>
                     <ul>
-                        {% for key, item in content.items %}
+                         {% for item in content.entries %}
                             <li class="dropside">
                                 <a href="">{{ item.title }}</a>
-                                {% if items in item %}
+                                {% if item.entries %}
                                     <ul>
-                                        {% for subKey, subItem in item.items %}
+                                        {% for subItem in item.entries %}
                                             <li><a href="">{{ subItem.title }}</a></li>
                                         {% endfor %}
                                     </ul>
                                 {% endif %}
                             </li>
-                        {% endfor %}
+                        {% endfor %} 
                     </ul>
-                </li>
+                </li> 
             {% else %}
                 <li><a href='{{language}}/{{paragraph.link}}'>{{ content.title }}</a></li>
             {% endif %}  
