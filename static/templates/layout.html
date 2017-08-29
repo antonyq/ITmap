@@ -24,16 +24,25 @@
     <!-- SCRIPTS -->
     <script src="{% static 'js/libs/jquery/jquery.min.js' %}"></script>
     <script src="{% static 'js/libs/bootstrap/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/libs/mdb/mdb.min.js' %}"></script>
+    <script src="{% static 'js/libs/mdb/waves-effect.js' %}"></script>
+    <script src="{% static 'js/libs/mdb/collapsible.js' %}"></script>
+    <script src="{% static 'js/libs/mdb/dropdown.js' %}"></script>
     <!-- SCRIPTS -->
 </head>
 <body>
     {% include "partials/header.html" %} 
-    
-    <main>
-        {% block main %}
-        {% endblock %}
-    </main>
+
+    <content class="container">
+        <div class="row">
+            <main class="col-lg-12">  {% block main %} {% endblock %}     </main>
+            {% comment %} <aside class="col-lg-2"> {% include "partials/aside.html" %} </aside> {% endcomment %}
+        </div>
+    </content>
 
     {% include "partials/footer.html" %}
 </body>
 </html>
+
+{% comment %} classes {% endcomment %}
+{% comment %} visible | invisible {% endcomment %}

@@ -1,11 +1,70 @@
 {% extends "layout.html" %}
 
+
 {% block main %}
-    <h1>INDEX</h1>  
-    <section></section>
-    <section></section>
-    <section></section>
-    <section></section>
-    <section></section>
-    <section></section>
+    <section id="INTRO">
+        <h1 class="h1-responsive">ITmap - ваш навигатор в мире технологий</h1>    
+    </section>
+    <section id="COURSES">
+        <p class="lead">
+            Только у нас вы сможете <a href="#pickup">подобрать наилучший для себя 
+            язык программирования </a> и <a href="/search"> найти подходящие курсы </a>
+        </p>
+        {% comment %} List group {% endcomment %}
+        <div data-meta="languages">
+            <div>Java</div>
+            <div>C#/.NET</div>
+            <div>ObjectiveC/Swift/iOS</div>
+            <div>C/C++</div>
+            <div>Frontend(HTML/CSS/JS)</div>
+            <div>PHP</div>
+            <div>Python</div>   
+            <div>Ruby</div>   
+        </div>
+        
+        <a class="btn btn-primary btn-lg" role="button">Все курсы</a>
+    </section>
+    <section id="COMPANIES">
+        <div class="card">
+            <div class="view overlay hm-white-slight">
+                <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20%287%29.jpg" class="img-fluid" alt="">
+                <a href="#">
+                    <div class="mask"></div>
+                </a>
+            </div>
+        
+            <div class="card-body">
+                <h4 class="card-title">Card title</h4>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Button</a>
+            </div>
+        </div>
+        
+        {% comment %} <div data-meta="courses">
+            <div>ITEA</div>
+            <div>CyberBionic Systematics</div>
+            <div>hillel</div>
+            <div>SourceIT</div>
+            <div>GoIT</div>
+            <div>Web Academy</div>
+            <div>и другие</div>
+        </div> {% endcomment %}
+        {% comment %} плата за попадение в топ каталога {% endcomment %}
+    </section>
+    <section id="TESTS">
+        <a name="pickup"></a>
+        Пройдите тесты и определите лучший для вас язык программирования. 
+        Если вы уже определились, вы также можете узнать уровень квалификации 
+        пройдя следующие тесты   
+        <div data-meta="languages">
+            <div>Java</div>
+            <div>C#/.NET</div>
+            <div>ObjectiveC/Swift/iOS</div>
+            <div>C/C++</div>
+            <div>Frontend(HTML/CSS/JS)</div>
+            <div>PHP/mySQL</div>
+            <div>Python</div>
+        </div>
+        <button type="button" class="btn btn-default btn-lg">Все тесты</button>
+    </section>
 {% endblock %}

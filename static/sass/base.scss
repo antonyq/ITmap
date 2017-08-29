@@ -1,13 +1,12 @@
 $white: white;
-$lime: #00FFCC;
-$blue: #0099FF;
-$black: #212121;
-$crimson: #FF3366;
-$grey: #DCDCDC;
+$grey: #EDEDED;
+$blue: #4285f4;
+$lime: #0A9993;
+$black: #2B2A29;
 $transparent: transparent;
 $menu-base-color: $white;
 $menu-hover-color: $grey;
-$menu-support-color: $white;
+$menu-support-color: $blue;
 
 
 @font-face {
@@ -43,11 +42,18 @@ body {
     background-repeat: no-repeat;
     background-image: url('../img/main.jpeg');
     background-size: 100%;
+    // background: $grey;
+}
+
+content {
+    position: relative;
+    top: 60px;
+    height: 100%;
 }
 
 main {
-    position: relative;
-    top: 100px;
+    padding-left: 0; 
+    padding-right: 0; 
 }
 
 a {
@@ -62,12 +68,17 @@ section {
     padding: 20px;
     width: 100%;
     min-height: 400px; 
+    text-align: center;
 }
 
 section:nth-child(2n) {
-    background: $grey;
+    background: $white;
 }
 
 section:nth-child(2n+1) {
     background: $transparent;
+}
+
+#INTRO {
+    height: 100%;
 }

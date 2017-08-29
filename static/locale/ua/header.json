@@ -37,6 +37,43 @@
                 }
             ]
         },
+        "test": {
+            "title": "ТЕСТИ",
+            "link": "tests",
+            "entries": [
+                {
+                    "title": "Програмування",
+                    "entries": [
+                        { "title": "Java" },
+                        { "title": "C#" },
+                        { "title": "iOS" },
+                        { "title": "C++" },
+                        { "title": "Frontend(HTML/CSS/JS)" },
+                        { "title": "PHP" },
+                        { "title": "Python" }
+                    ]
+                }, {
+                    "title": "QA та тестування"
+                }, {
+                    "title": "Аналіз данних",
+                    "entries": [
+                        { "title": "Статистика" },
+                        { "title": "Машинне навчання" },
+                        { "title": "Великі дані" }
+                    ]
+                }, {
+                    "title": "Управління проектами"
+                }, {
+                    "title": "Інтернет-маркетинг"
+                }, {
+                    "title": "SEO-оптимізація"
+                }, {
+                    "title": "UI/UX Design"
+                }, {
+                    "title": "IT recruitment"
+                }
+            ]
+        },
         "news": {
             "title": "НОВИНИ",
             "link": "news"
