@@ -6,3 +6,9 @@ footer {
     width: 100%;
     background: $black;
 }
+
+footer .h1 {
+    color: $black;
+    text-shadow: 0 0 3px rgba(255,255,255,0.1);
+    font-size: 100px;
+}

@@ -29,12 +29,12 @@
                     </ul>
                 </li> 
             {% else %}
-                <li><a href='{{locale.language}}/{{paragraph.link}}'>{{ content.title }}</a></li>
+                <li><a href='/{{locale.language}}/{{content.link}}'>{{ content.title }}</a></li>
             {% endif %}  
         {% endfor %}
     </ul>
     <div class="lang">
-        <a class="ru {% if locale.language == 'ru' %}selected{% endif %}" href="/ru/{{ location }}">RU</a>
-        <a class="ua {% if locale.language == 'ua' %}selected{% endif %}" href="/ua/{{ location }}">UA</a>
+        <a class="ru {% if locale.language == 'ru' %}selected{% endif %}" href="/ru{{ location }}">RU</a>
+        <a class="ua {% if locale.language == 'ua' %}selected{% endif %}" href="/ua{{ location }}">UA</a>
     </div>
 </header>

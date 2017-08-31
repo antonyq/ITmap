@@ -22,7 +22,9 @@ SECRET_KEY = '60=)er5edwyavd*5yg2=$4bp55y$v!pod60--2zx3)deel@1kg'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '10.1.1.86'
+    'localhost',
+    '10.1.1.86',
+    '127.0.0.1'
 ]
 
 
@@ -86,6 +88,11 @@ DATABASES = {
     }
 }
 
+ADMIN = {
+    'USER': 'admin',
+    'PASSWORD': 'antontitarenko843242'
+}
+
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
 
@@ -109,7 +116,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
-DEFAULT_LANGUAGE = 'ru'
+DEFAULT_LANGUAGE = 'ru' # custom property
 
 TIME_ZONE = 'UTC'
 

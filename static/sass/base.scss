@@ -36,24 +36,24 @@ $menu-support-color: $blue;
 
 
 body {
+    height: 100%;
     margin: 0;
     font-family: Roboto-Regular;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-image: url('../img/main.jpeg');
-    background-size: 100%;
-    // background: $grey;
+    background: $grey;
 }
 
 content {
     position: relative;
-    top: 60px;
     height: 100%;
 }
 
 main {
-    padding-left: 0; 
-    padding-right: 0; 
+    padding-left: 0 !important; 
+    padding-right: 0 !important; 
+}
+
+.row {
+    margin: 0;
 }
 
 a {
@@ -67,18 +67,44 @@ section {
     position: relative;
     padding: 20px;
     width: 100%;
+    height: 500px;
     min-height: 400px; 
     text-align: center;
 }
 
 section:nth-child(2n) {
-    background: $white;
+    background: $grey;
 }
 
-section:nth-child(2n+1) {
-    background: $transparent;
+#INTRO, #COURSES, #COMPANIES, #TESTS {
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #INTRO {
-    height: 100%;
+    padding-top: 230px; 
+    background-image: url("../img/techno/mac2.jpg");
+    min-height: 1000px;
+}
+
+#COURSES {
+    min-height: 1000px;
+}
+
+#COMPANIES {
+    background-image: url("../img/techno/main.jpeg");
+    min-height: 1000px;
+}
+
+#TESTS {
+    min-height: 1000px;
+}
+
+h1 {
+    color: $white;
+    font-family: Roboto-Light;
+    user-select: none;
 }

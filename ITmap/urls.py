@@ -8,6 +8,6 @@ urlpatterns = [
     url(r'^(?P<language>(ru|ua)?)/search', include('search.urls')),
     url(r'^(?P<language>(ru|ua)?)/news', include('news.urls')),
     url(r'^(?P<language>(ru|ua)?)/about', include('about.urls')),
-    url(r'^(?P<language>(ru|ua)?)/questionnaire', include('questionnaire.urls')),
+    url(r'^(?P<language>(ru|ua)?)/tests', include('tests.urls')),
     url(r'^admin/', admin.site.urls)
 ]
