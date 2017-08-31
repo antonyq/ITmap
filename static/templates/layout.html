@@ -35,10 +35,7 @@
     {% include "partials/header.html" %} 
 
     <content class="container">
-        <div class="row">
-            <main class="col-lg-12">  {% block main %} {% endblock %}     </main>
-            {% comment %} <aside class="col-lg-2"> {% include "partials/aside.html" %} </aside> {% endcomment %}
-        </div>
+            {% block main %} {% endblock %} 
     </content>
 
     {% include "partials/footer.html" %}
