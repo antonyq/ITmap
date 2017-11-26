@@ -116,5 +116,5 @@ USE_TZ = True
 
 
 # HEROKU SETTINGS
-SECRET_KEY = config('SECRET_KEY')
-DEBUG = config('DEBUG', default=False, cast=bool)
+# SECRET_KEY = config('SECRET_KEY')
+# DEBUG = config('DEBUG', default=False, cast=bool)
