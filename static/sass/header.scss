@@ -18,27 +18,24 @@ header {
     float: left;
     height: 50px;
     padding-top: 10px;
-    font-family: Roboto-Light;
-    min-width: 130px;
-    width: 11%;
+    font-family: Roboto-Medium;
     font-size: 30px;
     color: $blue;
+    min-width: 130px;
+    width: 11%;
     user-select: none;
     cursor: pointer;
+    .name {
+        margin: 2px 0 0 5px;
+        display: inline-block;
+        font-family: Roboto-Medium;
+        color: $blue;
+        span {
+            color: $black;
+        }    
+    }
     &:visited span, &:hover span {
         text-decoration: none;
-        color: $blue;
-    }
-    > {
-        img {
-            position: relative;
-            float: left;
-            height: 42px;
-        }
-        span {
-            margin: 2px 0 0 5px;
-            display: inline-block;
-        }
     }
 }
 
@@ -47,7 +44,7 @@ header {
     float: left;
     left: 20px;
     margin: 0 auto;
-    width: calc(70% - 40px);
+    width: calc(75% - 40px);
     padding: 0 20px;
     height: 100%;
     background: $menu-base-color;

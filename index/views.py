@@ -11,7 +11,7 @@ def index(request, language):
             'meta': locale_index['meta'],
             'language': language,
             'header': locale_header,
-            'main': '',
+            'main': locale_index,
             'footer': ''
         },
         'sitename': 'ITmap'

@@ -11,5 +11,44 @@
             "Львов",
             "Одесса"
         ]
-    }
+    },
+    "companies": [
+        {
+            "title": "ITEA",
+            "text": "",
+            "url": "https://itea.ua",
+            "imgurl": "static/img/companies/itea.png"
+        },
+        {
+            "title": "CyberBionic Systematics",
+            "text": "",
+            "url": "https://edu.cbsystematics.com",
+            "imgurl": "static/img/companies/cbs.png"
+        },
+        {
+            "title": "Hillel",
+            "text": "",
+            "url": "https://itschool-hillel.org",
+            "imgurl": "static/img/companies/hillel.jpg"
+        },
+        {
+            "title": "SourceIT",
+            "text": "",
+            "url": "https://sourceit.com.ua",
+            "imgurl": "static/img/companies/sourceit.png"
+        },
+        {
+            "title": "GoIT",
+            "text": "",
+            "url": "https://goit.ua",
+            "imgurl": "static/img/companies/goit.png"
+        },
+        {
+            "title": "Web Academy",
+            "text": "",
+            "url": "https://web-academy.com.ua",
+            "imgurl": "static/img/companies/webacademy.png"
+        }
+    ],
+    "details": "на сайт"
 }

@@ -4,5 +4,6 @@ from django.contrib import admin
 from . import views
 
 urlpatterns = [
-    url(r'^$', views.news)
+    url(r'^$', views.news),
+    url(r'^(P<article_id>[0-9]+)$', views.article)
 ]

@@ -97,6 +97,34 @@ section:nth-child(2n) {
 #COMPANIES {
     background-image: url("../img/techno/main.jpeg");
     min-height: 1000px;
+
+    .card {
+        height: 500px;
+        padding: 5px; 
+
+        .overlay {
+            height: 100px;
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .card-body {
+            position: absolute;
+            bottom: 10px;
+        }
+
+        .card-title {
+            color: black;
+        }
+
+        .card-text {
+            padding-right: 5px;
+            text-align: left;
+            font-size: 1em;
+            line-height: 20px;
+        }
+    }
 }
 
 #TESTS {

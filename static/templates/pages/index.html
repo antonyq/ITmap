@@ -37,20 +37,23 @@
         
         <a class="btn btn-primary btn-lg" role="button">Все курсы</a>
     </section>
-    <section id="COMPANIES">
-        <div class="card">
-            <div class="view overlay hm-white-slight">
-                <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20%287%29.jpg" class="img-fluid" alt="">
-                <a href="#">
-                    <div class="mask"></div>
-                </a>
-            </div>
-            
-            <div class="card-body">
-                <h4 class="card-title">Card title</h4>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Button</a>
-            </div>
+    <section class="container-fluid" id="COMPANIES">
+        <div class="row">
+            {% for company in locale.main.companies %}
+                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-12">
+                    <div class="card">
+                        <div class="view overlay" style="background-image: url('{{ company.imgurl }}');"></div>
+                        <div class="card-body">
+                            <p class="card-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
+                                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            </p>
+                            <a href="{{ company.url }}" class="btn btn-primary">{{ locale.main.details }}</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
         </div>
         
         {% comment %} <div data-meta="courses">
