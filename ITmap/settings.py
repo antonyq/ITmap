@@ -75,18 +75,9 @@ WSGI_APPLICATION = 'ITmap.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql', 
-        'NAME': 'itmap',
-        'USER': 'root',
-        'PASSWORD': 'antonyq5909',
-        'HOST': 'localhost',
-        'PORT': '3306',
+        'ENGINE': 'django.db.backends.sqlite3', 
+        'NAME': 'itmap.db'
     }
-}
-
-ADMIN = {
-    'USER': 'admin',
-    'PASSWORD': 'antontitarenko843242'
 }
 
 # Password validation
