@@ -2,10 +2,10 @@ import os
 
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles/')
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, 'static/'),
 )
 
 # Quick-start development settings - unsuitable for production
@@ -17,11 +17,11 @@ SECRET_KEY = '60=)er5edwyavd*5yg2=$4bp55y$v!pod60--2zx3)deel@1kg'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [
-    'localhost',
-    '10.1.1.86',
-    '127.0.0.1'
-]
+# ALLOWED_HOSTS = [
+#     'localhost',
+#     '10.1.1.86',
+#     '127.0.0.1'
+# ]
 
 
 # Application definition
@@ -112,9 +112,3 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
-
-
-# HEROKU SETTINGS
-# SECRET_KEY = config('SECRET_KEY')
-# DEBUG = config('DEBUG', default=False, cast=bool)
