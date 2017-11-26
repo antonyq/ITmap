@@ -1,1 +1,1 @@
-web: gunicorn itmap.wsgi
+web: gunicorn itmap.wsgi --log-file -
