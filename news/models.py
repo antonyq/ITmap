@@ -7,3 +7,4 @@ class Article(models.Model):
     img = models.CharField(max_length=1000)
     body = models.TextField()
     posted = models.DateField(db_index=True, auto_now_add=True)
+

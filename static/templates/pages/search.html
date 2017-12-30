@@ -1,4 +1,115 @@
 {% extends "layout.html" %}
+{% load staticfiles %}
 
 
-<h1>SEARCH</h1>
+{% block main %}
+<link rel="stylesheet" href="{% static 'css/libs/bootstrap/bootstrap-select.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/pages/search.css' %}">
+
+<script src="{% static 'js/libs/bootstrap/bootstrap-select.min.js' %}"></script>
+<script src="{% static 'js/pages/search.js' %}"></script>
+
+<main class="container">
+    <section class="row" style="top: 100px;">
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" id="filters">
+            <div class="form-group">
+                <select class="selectpicker" id="courses" multiple data-size="10" title="Курсы">
+                    <optgroup label="Web">
+                        <option title="Херня">PHP</option>                    
+                        <option title="Четко">Python</option>
+                        <option title="Херня">Ruby</option>
+                        <option title="Нормас">Frontend(HTML, CSS, JS)</option>
+                    </optgroup>
+                    <optgroup label="Mobile">
+                        <option>Java/Scala</option>
+                        <option>Objective-C/Swift</option>
+                        <option>C++</option>
+                    </optgroup>
+                    <optgroup label="Analytics">
+                        <option>Statistics</option>
+                        <option>Data Analysis</option>
+                        <option>Machine Learning</option>
+                    </optgroup>
+                </select>
+                <select class="selectpicker show-tick" id="district" multiple data-size="10"  data-live-search="true" title="Районы">
+                    <option>Голосеевский</option>	
+                    <option>Дарницкий</option>
+                    <option>Деснянский</option>
+                    <option>Днепровский</option>
+                    <option>Оболонский</option>
+                    <option>Печерский</option>
+                    <option>Подольский</option>
+                    <option>Святошинский</option>
+                    <option>Соломенский</option>
+                    <option>Шевченковский</option>
+                </select>
+                <select class="selectpicker metro show-tick" multiple data-size="10" data-live-search="true" title="Метро">
+                    <optgroup label="Красная линия">
+                        <option data-subtext="110">Академгородок</option>
+                        <option data-subtext="111">Житомирская</option>
+                        <option data-subtext="112">Святошин</option>
+                        <option data-subtext="113">Нивки</option>
+                        <option data-subtext="114">Берестейская</option>
+                        <option data-subtext="115">Шулявская</option>
+                        <option data-subtext="116">Политехнический институт</option>
+                        <option data-subtext="117">Вокзальная</option>
+                        <option data-subtext="118">Университет</option>
+                        <option data-subtext="119">Теаральная</option>
+                        <option data-subtext="120">Крещатик</option>
+                        <option data-subtext="121">Арсенальная</option>
+                        <option data-subtext="122">Днепр</option>
+                        <option data-subtext="123">Гидропарк</option>
+                        <option data-subtext="124">Левобережная</option>
+                        <option data-subtext="125">Дарница</option>
+                        <option data-subtext="126">Черниговская</option>
+                        <option data-subtext="126">Лесная</option>
+                    </optgroup>
+                    <optgroup label="Синяя линия">
+                        <option data-subtext="210">Героев Днепра</option>
+                        <option data-subtext="211">Минская</option>
+                        <option data-subtext="212">Оболонь</option>
+                        <option data-subtext="213">Петровка</option>
+                        <option data-subtext="214">Тараса Шевченка</option>
+                        <option data-subtext="215">Контрактовая площадь</option>
+                        <option data-subtext="216">Почтовая площадь</option>
+                        <option data-subtext="217">Площадь Независимости</option>
+                        <option data-subtext="218">Площадь Льва Толстого</option>
+                        <option data-subtext="219">Олимпийская</option>
+                        <option data-subtext="220">Дворец "Украина"</option>
+                        <option data-subtext="221">Лыбедская</option>
+                        <option data-subtext="222">Демеевская</option>
+                        <option data-subtext="223">Голосеевская</option>
+                        <option data-subtext="224">Васильковская</option>
+                        <option data-subtext="225">Выставочный центр</option>
+                        <option data-subtext="226">Ипподром</option>
+                        <option data-subtext="227">Теремки</option>
+                    </optgroup>
+                    <optgroup label="Зеленая линия">
+                        <option data-subtext="310">Сырец</option>
+                        <option data-subtext="311">Дорогожичи</option>
+                        <option data-subtext="312">Лукьяновская</option>
+                        <option data-subtext="314">Золотые ворота</option>
+                        <option data-subtext="315">Дворец спорта</option>
+                        <option data-subtext="316">Кловская</option>
+                        <option data-subtext="317">Печерская</option>
+                        <option data-subtext="318">Дружбы народов</option>
+                        <option data-subtext="319">Выдубичи</option>
+                        <option data-subtext="321">Славутич</option>
+                        <option data-subtext="322">Осокорки</option>
+                        <option data-subtext="323">Позняки</option>
+                        <option data-subtext="324">Харьковская</option>
+                        <option data-subtext="325">Вырлица</option>
+                        <option data-subtext="326">Бориспольская</option>
+                        <option data-subtext="327">Красный хутор</option>
+                    </optgroup>
+                </select>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" id="map">
+
+        </div>
+    </section>
+</main>
+{% endblock %}
+
+
