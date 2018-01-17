@@ -1,0 +1,56 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang={{ locale.language }}>
+<head>
+    <title>{{ locale.meta.title }}</title>
+    <meta name="description" content="{{ locale.meta.description }}">
+    <meta name="keywords" content="{{ locale.meta.keywords|join:', ' }}">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{% static 'img/favicon.png' %}">
+
+
+    <!-- STYLES -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/libs/bootstrap/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/libs/bootstrap/bootstrap-select.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/magnific-popup.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/owl.carousel.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/owl.theme.default.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <!-- STYLES -->
+</head>
+
+<body>
+    {% include "partials/header.html" %} 
+
+    <content class="container-fluid">
+        {% block main %} {% endblock %} 
+    </content>
+
+    {% include "partials/footer.html" %}
+
+    <div id="back-to-top"></div>
+    
+    <div id="preloader">
+		<div class="preloader">
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+	</div>
+
+    <!-- SCRIPTS -->
+    <script src="{% static 'js/libs/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'js/libs/jquery/jquery.magnific-popup.js' %}"></script>
+    <script src="{% static 'js/libs/bootstrap/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/libs/bootstrap/bootstrap-select.min.js' %}"></script>
+    <script src="{% static 'js/libs/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+    <!-- SCRIPTS -->
+</body>
+</html>

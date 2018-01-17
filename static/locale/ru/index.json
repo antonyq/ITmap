@@ -10,7 +10,8 @@
             "Харьков",
             "Львов",
             "Одесса"
-        ]
+        ],
+        "sitename": "ITmap"
     },
     "companies": [
         {
@@ -49,6 +50,5 @@
             "url": "https://web-academy.com.ua",
             "imgurl": "static/img/companies/webacademy.png"
         }
-    ],
-    "details": "на сайт"
+    ]
 }
