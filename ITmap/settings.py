@@ -28,6 +28,7 @@ DEBUG = True
 # Application definition
 
 INSTALLED_APPS = [
+    'blog',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -107,11 +108,14 @@ USE_I18N = True
 USE_L10N = True
 USE_TZ = True
 
-# Change 'default' database configuration with $DATABASE_URL.
-# DATABASES['default'].update(dj_database_url.config(conn_max_age=500))
+# CUSTOM VARIABLES
+POSTS_PER_PAGE = 5
+BULLETS_IN_PAGINATION = 5
 
-# Honor the 'X-Forwarded-Proto' header for request.is_secure()
-# SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-
-# Allow all host headers
-# ALLOWED_HOSTS = ['*']
+tasksfordima = [
+    'design critics: additional fonts, colors, landing structure',
+    'texts for landing',
+    'articles for blog',
+    'parallax images',
+    'footer content(maybe soc media shortcuts)'
+]

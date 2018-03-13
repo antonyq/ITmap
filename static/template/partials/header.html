@@ -1,65 +1,20 @@
-{% load static %}
-
-
-<header id="home">
-    <div class="bg-img" style="background-image: url('static/img/background/background1.jpg');">
-        <div class="overlay"></div>
-    </div>
-    
-    <nav id="nav" class="navbar nav-transparent">
-        <div class="container">
-
-            <div class="navbar-header">
-                <div class="navbar-brand">
-                    <a class="logo" href="index.html">
-                        <span class="logo-it">IT</span><span class="logo-map">map</span>
-                    </a>
-                    <a class="logo-alt" href="index.html">
-                        <span class="logo-it">IT</span><span class="logo-map">map</span>
-                    </a>
-                </div>
-                
-                
-                <div class="nav-collapse">
-                    <span></span>
-                </div>
-            </div>
-            
-            <ul class="main-nav nav navbar-nav navbar-right">
-                <li><a href="#home">Главная</a></li>
-                <li><a href="#about">О нас</a></li>
-                <li><a href="#courses">Курсы</a></li>
-                <li><a href="#schools">Школы</a></li>
-                <li><a href="#tests">Тесты</a></li>
-                <li><a href="#team">Команда</a></li>
-                <li class="has-dropdown"><a href="#news">Новости</a>
-                    <ul class="dropdown">
-                        <li><a href="blog-single.html">Пост</a></li>
-                    </ul>
-                </li>
-                <li><a href="#contact">Контакты</a></li>
+<header>
+    <nav class="grey darken-4 grey-text">
+        <div class="nav-wrapper">
+            <a href="/" class="brand-logo cyan-text">
+                <span style="font-weight: bold; font-size: 34px;">IT</span>map
+            </a>
+            <a href="/" data-activates="mobile-demo" class="button-collapse">
+                <i class="material-icons">menu</i>
+            </a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="/search">Курсы</a></li>
+                <li><a href="/blog">Новости</a></li>
             </ul>
-            
+            <ul class="side-nav" id="mobile-demo">
+                <li><a href="/search">Курсы</a></li>
+                <li><a href="/blog">Новости</a></li>
+            </ul>
         </div>
     </nav>
-    
-
-    <div class="home-wrapper">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-10 col-md-offset-1">
-                    <div class="home-content">
-                        <h1 class="white-text">ваш навигатор в мире технологий</h1>
-                        <p class="white-text">
-                            У нас вы сможете подобрать наилучший для себя 
-                            язык программирования и найти подходящие курсы
-                        </p>
-                        <!-- <button class="white-btn">ТЕСТЫ</button>
-                        <button class="main-btn">КУРСЫ</button> -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
 </header>

@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+
+{% block main %}
+{% for post in posts %}
+    <article>
+        <div class="title">{{post.title}}</div>
+        <p class="text truncate">{{post.body}}</p>
+        <p class="posted">{{post.posted}}</p>
+        <hr>
+    </article>
+{% endfor %}
+
+<div class="pagination-container">
+    <ul class="pagination center-align">
+            <li class={% if current_page  == 1 %} "disabled" {% else %} "waves-effect" {% endif %}>
+                <a {% if current_page  != 1 %} href="/blog/page/{{previous_page}}" {% endif %}>
+                    <i class="material-icons">chevron_left</i>
+                </a>
+            </li>
+            {% for page in pages %}
+                <li class= {% if current_page == page %} "active cyan" {% else %} "waves-effect" {% endif %}>
+                    <a {% if current_page == page %} "active" {% else %} href="/blog/page/{{page}}" {% endif %}>{{page}}</a>
+                </li>
+            {% endfor %}
+            <li class={% if current_page  == all_pages_count %} "disabled" {% else %} "waves-effect" {% endif %}>
+                <a {% if current_page  != all_pages_count %} href="/blog/page/{{next_page}}" {% endif %}>
+                    <i class="material-icons">chevron_right</i>
+                </a>
+            </li>
+        </ul>
+</div>
+{% endblock %}
