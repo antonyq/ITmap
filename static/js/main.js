@@ -9,4 +9,5 @@ $(document).ready(() => {
 		}
 	);
 	$('.parallax').parallax();
+	$('ul.tabs').tabs();
 });

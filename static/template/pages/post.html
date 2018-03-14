@@ -2,9 +2,18 @@
 
 
 {% block main %}
-<h1>Post №{{ id }}</h1>
-<br>
-<h1>{{title}}</h1>
-<p>{{body}}</p>
-<p>Created: {{posted}}</p>
+<div class="row">
+    <div class="col s12 m12 l12 xl12">
+        <div class="card card-big">
+            <div class="card-image">
+                <img src="/{{ post.image }}">
+                <span class="card-title">{{ post.title }}</span>
+            </div>
+            <div class="card-content">
+                <p>{{ post.body }}</p>    
+            </div>
+            <div class="posted">{{ post.posted }}</div>
+        </div>
+    </div>
+</div>
 {% endblock %}

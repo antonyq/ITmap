@@ -2,29 +2,42 @@
 
 
 {% block main %}
-{% for post in posts %}
-    <article>
-        <div class="title">{{post.title}}</div>
-        <p class="text truncate">{{post.body}}</p>
-        <p class="posted">{{post.posted}}</p>
-        <hr>
-    </article>
-{% endfor %}
+<div class="row">
+    {% for post in posts %}
+    <div class="col s12 m6 l4 xl4">
+        <div class="card small">
+            <div class="card-image">
+                <img src="/{{ post.image }}">
+                <span class="card-title">{{ post.title }}</span>
+            </div>
+            <div class="card-content">
+                <p class="truncate">{{ post.body }}</p>
+            </div>
+            <div class="card-action">
+                <div class="posted left" style="font-style: italic;">{{ post.posted }}</div>
+                <a class="cyan-text right" href="/blog/post/{{ post.id }}">Детальнее</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
 
 <div class="pagination-container">
     <ul class="pagination center-align">
             <li class={% if current_page  == 1 %} "disabled" {% else %} "waves-effect" {% endif %}>
-                <a {% if current_page  != 1 %} href="/blog/page/{{previous_page}}" {% endif %}>
+                <a {% if current_page  != 1 %} href="/blog/page/{{ previous_page }}" {% endif %}>
                     <i class="material-icons">chevron_left</i>
                 </a>
             </li>
             {% for page in pages %}
                 <li class= {% if current_page == page %} "active cyan" {% else %} "waves-effect" {% endif %}>
-                    <a {% if current_page == page %} "active" {% else %} href="/blog/page/{{page}}" {% endif %}>{{page}}</a>
+                    <a {% if current_page == page %} "active" {% else %} href="/blog/page/{{ page }}" {% endif %}>
+                        {{ page }}
+                    </a>
                 </li>
             {% endfor %}
             <li class={% if current_page  == all_pages_count %} "disabled" {% else %} "waves-effect" {% endif %}>
-                <a {% if current_page  != all_pages_count %} href="/blog/page/{{next_page}}" {% endif %}>
+                <a {% if current_page  != all_pages_count %} href="/blog/page/{{ next_page }}" {% endif %}>
                     <i class="material-icons">chevron_right</i>
                 </a>
             </li>
